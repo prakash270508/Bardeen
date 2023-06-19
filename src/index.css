@@ -1,0 +1,14 @@
+
+
+.links{
+    color: #6f60cc;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.links:hover{
+    color: #7a6ae3;
+    text-decoration: underline;
+    cursor: pointer;
+}
