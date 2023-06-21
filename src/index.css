@@ -93,3 +93,51 @@
     }
     
 }
+@media screen and (max-width: 840px) {
+    body{
+        overflow-x: hidden;
+    }
+    .row{
+        display: block;
+    }
+    .col-5{
+        width: 100%;
+    }
+    .col-7{
+        width: 100%;
+    }
+    .d-flex{
+        flex-direction: column;
+    }
+    .d-flex img{
+        height: 350px;
+        width: 100%;
+    }
+    .feature_text{
+        margin-left: 0;
+    }
+
+    .elecontainer{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .elecontainer img{
+        height: 350px;
+        width: 96%;
+    }
+
+    .elecontainer h5{
+        width: 98%;
+    }
+    .elecontainer p{
+        width: 98%;
+    }
+    .mainBanner{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .mainBanner img{
+        width: 96%;
+    }
+    
+}
