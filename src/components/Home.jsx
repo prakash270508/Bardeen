@@ -39,11 +39,11 @@ export default function Home() {
         </h4>
         <div className="row">
           {news[0] && (
-            <div className="col-5 mt-4">
+            <div className="col-5 mt-4 mainBanner">
               <img
-                src={news[0].urlToImage ? news[0].urlToImage : ""}
+                src={news[0].urlToImage ? news[0].urlToImage : "https://www.blognone.com/sites/default/files/externals/7f3dc14b64f1b9e902d5f73c1c4b5956.png"}
                 alt=""
-                style={{ width: "100%", height: "42%" }}
+                style={{ width: "98%", height: "42%" }}
                 className="mt-3"
               />
               <div className="text-muted">
@@ -67,7 +67,7 @@ export default function Home() {
                 >
                   <div className="d-flex mt-3">
                     <div>
-                      <img src={ele.urlToImage} alt="" />
+                      <img src={ele.urlToImage ? ele.urlToImage : "https://www.blognone.com/sites/default/files/externals/7f3dc14b64f1b9e902d5f73c1c4b5956.png"} alt="" />
                     </div>
                     <div className="feature_text">
                       <div className="text-muted">{ele.publishedAt}</div>
@@ -100,8 +100,8 @@ export default function Home() {
                   target="_blank"
                   style={{ textDecoration: "none" }}
                 >
-                  <div className="mt-3">
-                    <img src={ele.urlToImage} alt="" height={200} width={300} />
+                  <div className="elecontainer mt-3">
+                    <img src={ele.urlToImage ? ele.urlToImage : "https://www.blognone.com/sites/default/files/externals/7f3dc14b64f1b9e902d5f73c1c4b5956.png"} alt="" />
                     <div>
                       <div className="text-muted">{ele.publishedAt}</div>
                       <div className="mt-3">
@@ -109,7 +109,7 @@ export default function Home() {
                           <b>{ele.title}</b>
                         </h5>{" "}
                       </div>
-                      <p>{ele.description}</p>
+                      <p className="text-muted ">{ele.description}</p>
                     </div>
                   </div>
                   <hr />

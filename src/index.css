@@ -40,7 +40,15 @@
     margin-left: 10px;
 }
 
+.elecontainer img{
+    height: 200px;
+    width: 300px;
+}
+
 @media screen and (max-width: 480px) {
+    body{
+        overflow-x: hidden;
+    }
     .row{
         display: block;
     }
@@ -59,6 +67,29 @@
     }
     .feature_text{
         margin-left: 0;
+    }
+
+    .elecontainer{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .elecontainer img{
+        height: 200px;
+        width: 96%;
+    }
+
+    .elecontainer h5{
+        width: 98%;
+    }
+    .elecontainer p{
+        width: 98%;
+    }
+    .mainBanner{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .mainBanner img{
+        width: 96%;
     }
     
 }
