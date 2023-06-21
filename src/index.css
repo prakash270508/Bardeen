@@ -12,3 +12,53 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
+.line{
+    width: 100%;
+    height: 3px;
+    background-color: rgb(58, 58, 58);
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgb(171, 171, 171);
+}
+
+.links{
+    text-decoration: none;
+    color: black;
+}
+
+.links :hover{
+    text-decoration: none;
+    color: black;
+}
+
+.d-flex img{
+    height: 135px;
+    width: 250px;
+}
+
+.feature_text{
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    .row{
+        display: block;
+    }
+    .col-5{
+        width: 100%;
+    }
+    .col-7{
+        width: 100%;
+    }
+    .d-flex{
+        flex-direction: column;
+    }
+    .d-flex img{
+        height: 180px;
+        width: 100%;
+    }
+    .feature_text{
+        margin-left: 0;
+    }
+    
+}

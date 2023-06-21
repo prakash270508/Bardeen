@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { auth, provider } from "../utils/config";
 import GoogleButton from "react-google-button";
 import { signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth";
@@ -15,13 +15,16 @@ export default function Signup() {
   const handleGoogleSignIn = async () => {
     try {
       const response = await signInWithPopup(auth, provider);
-      toast.success("Logged in");
-      localStorage.setItem("token", response.user.accessToken);
-      navigate("/");
+      toast.success("Logged in")
+      localStorage.setItem("token", response.user.accessToken)
+      navigate('/')
+
+      
     } catch (error) {
       toast.error(error.message);
-      localStorage.removeItem("token");
+      localStorage.removeItem('token')
     }
+
   };
 
   const handleSignup = async (e) => {
@@ -38,12 +41,18 @@ export default function Signup() {
 
       toast.success("Signup successfull");
       localStorage.setItem("token", response.user.accessToken);
-      navigate("/");
+      navigate('/')
     } catch (error) {
       toast.error(error.message);
-      localStorage.removeItem("token");
+      localStorage.removeItem('token')
     }
   };
+
+  useEffect(()=>{
+    if(localStorage.getItem('token')){
+      navigate('/')
+    }
+  },[])
 
   return (
     <section className="vh-100" style={{ backgroundColor: "#6f60cc" }}>
