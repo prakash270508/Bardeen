@@ -96,7 +96,7 @@ export default function Signup() {
                       <span>
                         <b>Already have account</b>
                       </span>
-                      <Link className="links mx-2" to={"/sign-up"}>
+                      <Link className="links mx-2" to={"/"}>
                         Login
                       </Link>
                     </div>
